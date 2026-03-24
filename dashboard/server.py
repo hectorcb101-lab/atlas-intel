@@ -15,6 +15,7 @@ from pathlib import Path
 
 from fastapi import FastAPI, Request, Response, HTTPException, Form
 from fastapi.responses import HTMLResponse, FileResponse, RedirectResponse, JSONResponse
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from jose import jwt
 
@@ -125,6 +126,14 @@ def verify_token(token: str) -> str | None:
 
 app = FastAPI(docs_url=None, redoc_url=None, openapi_url=None)
 
+# CORS for Vite dev server
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 # Auth middleware
 @app.middleware("http")
 async def auth_middleware(request: Request, call_next):
@@ -136,6 +145,15 @@ async def auth_middleware(request: Request, call_next):
     
     # Allow static assets for login page
     if path.startswith("/static/login"):
+        return await call_next(request)
+    
+    # Allow data endpoints without auth (read-only JSON feeds consumed by Vite frontend)
+    if path.startswith("/data/") or path.startswith("/api/data/"):
+        return await call_next(request)
+    
+    # Dev mode bypass: skip all auth when ATLAS_DEV_MODE=1
+    if os.environ.get("ATLAS_DEV_MODE") == "1":
+        request.state.user = "dev"
         return await call_next(request)
     
     # Check JWT cookie
