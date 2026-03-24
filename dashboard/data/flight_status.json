@@ -1,0 +1,8 @@
+{
+  "status": "degraded",
+  "tracked": 0,
+  "anomalies": 0,
+  "note": "OpenSky Network unreachable from AWS \u2014 proxy needed",
+  "flights": [],
+  "updated": "11:21 UTC"
+}

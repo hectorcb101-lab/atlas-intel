@@ -1,0 +1,27 @@
+{
+  "status": "online",
+  "markets": {
+    "VIX": {
+      "value": 26.35,
+      "change_pct": 0.76
+    },
+    "OIL": {
+      "value": 90.24,
+      "change_pct": 2.39
+    },
+    "GOLD": {
+      "value": 4413.4,
+      "change_pct": 0.21
+    },
+    "DEFENSE": {
+      "value": 223.35,
+      "change_pct": 0.35
+    },
+    "SP500": {
+      "value": 6581.0,
+      "change_pct": 1.15
+    }
+  },
+  "correlations": [],
+  "last_update": "2026-03-24T11:19:26.100853+00:00"
+}

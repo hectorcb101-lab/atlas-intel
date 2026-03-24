@@ -1,0 +1,179 @@
+{
+  "alerts": [
+    {
+      "severity": "critical",
+      "title": "Ais Vessel Event",
+      "message": "Maritime congestion alert at Panama Canal: 7 vessels in 60min window (4.8x normal rate). Severity: high. Potential supply chain disruption for mixed trade.",
+      "time": "11:09 UTC",
+      "source": "vessel"
+    },
+    {
+      "severity": "critical",
+      "title": "Ais Vessel Event",
+      "message": "Maritime congestion alert at Turkish Straits (Bosphorus): 163 vessels in 60min window (32.6x normal rate). Severity: high. Potential supply chain disruption for grain_oil trade.",
+      "time": "11:07 UTC",
+      "source": "vessel"
+    },
+    {
+      "severity": "critical",
+      "title": "Ais Vessel Event",
+      "message": "Maritime congestion alert at Strait of Malacca: 3887 vessels in 60min window (46.64x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.",
+      "time": "10:56 UTC",
+      "source": "vessel"
+    },
+    {
+      "severity": "critical",
+      "title": "Ais Vessel Event",
+      "message": "Maritime congestion alert at Turkish Straits (Bosphorus): 176 vessels in 60min window (35.2x normal rate). Severity: high. Potential supply chain disruption for grain_oil trade.",
+      "time": "10:37 UTC",
+      "source": "vessel"
+    },
+    {
+      "severity": "critical",
+      "title": "Ais Vessel Event",
+      "message": "Maritime congestion alert at Panama Canal: 7 vessels in 60min window (4.8x normal rate). Severity: high. Potential supply chain disruption for mixed trade.",
+      "time": "10:34 UTC",
+      "source": "vessel"
+    },
+    {
+      "severity": "critical",
+      "title": "Ais Vessel Event",
+      "message": "Maritime congestion alert at Strait of Malacca: 3827 vessels in 60min window (45.92x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.",
+      "time": "10:26 UTC",
+      "source": "vessel"
+    },
+    {
+      "severity": "critical",
+      "title": "Ais Vessel Event",
+      "message": "Maritime congestion alert at Turkish Straits (Bosphorus): 197 vessels in 60min window (39.4x normal rate). Severity: high. Potential supply chain disruption for grain_oil trade.",
+      "time": "10:06 UTC",
+      "source": "vessel"
+    },
+    {
+      "severity": "critical",
+      "title": "Ais Vessel Event",
+      "message": "Maritime congestion alert at Panama Canal: 8 vessels in 60min window (5.49x normal rate). Severity: high. Potential supply chain disruption for mixed trade.",
+      "time": "10:03 UTC",
+      "source": "vessel"
+    },
+    {
+      "severity": "critical",
+      "title": "Ais Vessel Event",
+      "message": "Maritime congestion alert at Strait of Malacca: 3898 vessels in 60min window (46.78x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.",
+      "time": "09:56 UTC",
+      "source": "vessel"
+    },
+    {
+      "severity": "critical",
+      "title": "Ais Vessel Event",
+      "message": "Maritime congestion alert at Turkish Straits (Bosphorus): 189 vessels in 60min window (37.8x normal rate). Severity: high. Potential supply chain disruption for grain_oil trade.",
+      "time": "09:36 UTC",
+      "source": "vessel"
+    },
+    {
+      "severity": "critical",
+      "title": "Ais Vessel Event",
+      "message": "Maritime congestion alert at Strait of Malacca: 4021 vessels in 60min window (48.25x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.",
+      "time": "09:26 UTC",
+      "source": "vessel"
+    },
+    {
+      "severity": "critical",
+      "title": "Ais Vessel Event",
+      "message": "Maritime congestion alert at Panama Canal: 6 vessels in 60min window (4.11x normal rate). Severity: high. Potential supply chain disruption for mixed trade.",
+      "time": "09:24 UTC",
+      "source": "vessel"
+    },
+    {
+      "severity": "critical",
+      "title": "Ais Vessel Event",
+      "message": "Maritime congestion alert at Turkish Straits (Bosphorus): 152 vessels in 60min window (30.4x normal rate). Severity: high. Potential supply chain disruption for grain_oil trade.",
+      "time": "09:06 UTC",
+      "source": "vessel"
+    },
+    {
+      "severity": "critical",
+      "title": "Ais Vessel Event",
+      "message": "Maritime congestion alert at Strait of Malacca: 3891 vessels in 60min window (46.69x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.",
+      "time": "08:56 UTC",
+      "source": "vessel"
+    },
+    {
+      "severity": "critical",
+      "title": "Ais Vessel Event",
+      "message": "Maritime congestion alert at Panama Canal: 7 vessels in 60min window (4.8x normal rate). Severity: high. Potential supply chain disruption for mixed trade.",
+      "time": "08:45 UTC",
+      "source": "vessel"
+    },
+    {
+      "severity": "critical",
+      "title": "Ais Vessel Event",
+      "message": "Maritime congestion alert at Turkish Straits (Bosphorus): 150 vessels in 60min window (30.0x normal rate). Severity: high. Potential supply chain disruption for grain_oil trade.",
+      "time": "08:35 UTC",
+      "source": "vessel"
+    },
+    {
+      "severity": "critical",
+      "title": "Ais Vessel Event",
+      "message": "Maritime congestion alert at Strait of Malacca: 3930 vessels in 60min window (47.16x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.",
+      "time": "08:26 UTC",
+      "source": "vessel"
+    },
+    {
+      "severity": "critical",
+      "title": "Ais Vessel Event",
+      "message": "Maritime congestion alert at Panama Canal: 8 vessels in 60min window (5.49x normal rate). Severity: high. Potential supply chain disruption for mixed trade.",
+      "time": "08:15 UTC",
+      "source": "vessel"
+    },
+    {
+      "severity": "critical",
+      "title": "Ais Vessel Event",
+      "message": "Maritime congestion alert at Turkish Straits (Bosphorus): 157 vessels in 60min window (31.4x normal rate). Severity: high. Potential supply chain disruption for grain_oil trade.",
+      "time": "08:04 UTC",
+      "source": "vessel"
+    },
+    {
+      "severity": "critical",
+      "title": "Ais Vessel Event",
+      "message": "Maritime congestion alert at Strait of Malacca: 4032 vessels in 60min window (48.38x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.",
+      "time": "07:56 UTC",
+      "source": "vessel"
+    },
+    {
+      "severity": "critical",
+      "title": "Ais Vessel Event",
+      "message": "Maritime congestion alert at Panama Canal: 7 vessels in 60min window (4.8x normal rate). Severity: high. Potential supply chain disruption for mixed trade.",
+      "time": "07:40 UTC",
+      "source": "vessel"
+    },
+    {
+      "severity": "critical",
+      "title": "Ais Vessel Event",
+      "message": "Maritime congestion alert at Turkish Straits (Bosphorus): 135 vessels in 60min window (27.0x normal rate). Severity: high. Potential supply chain disruption for grain_oil trade.",
+      "time": "07:33 UTC",
+      "source": "vessel"
+    },
+    {
+      "severity": "critical",
+      "title": "Ais Vessel Event",
+      "message": "Maritime congestion alert at Strait of Malacca: 3774 vessels in 60min window (45.29x normal rate). Severity: high. Potential supply chain disruption for oil_lng trade.",
+      "time": "07:26 UTC",
+      "source": "vessel"
+    },
+    {
+      "severity": "critical",
+      "title": "Ais Vessel Event",
+      "message": "Maritime congestion alert at Panama Canal: 15 vessels in 60min window (10.29x normal rate). Severity: high. Potential supply chain disruption for mixed trade.",
+      "time": "07:10 UTC",
+      "source": "vessel"
+    },
+    {
+      "severity": "critical",
+      "title": "Ais Vessel Event",
+      "message": "Maritime congestion alert at Turkish Straits (Bosphorus): 134 vessels in 60min window (26.8x normal rate). Severity: high. Potential supply chain disruption for grain_oil trade.",
+      "time": "07:02 UTC",
+      "source": "vessel"
+    }
+  ]
+}
