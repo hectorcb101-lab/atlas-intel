@@ -146,9 +146,11 @@ function buildTerminatorGeoJSON(date: Date): GeoJSON.Feature {
     // tan(lat) = -cos(hourAngle) / tan(declination)
     // Simplified: lat = atan(-cos(lngDiff) / tan(decl))
     let lat: number;
-    if (Math.abs(sun.lat) < 0.001) {
-      // Near equinox — terminator is a great circle through the poles
-      lat = rad2deg(Math.atan(-Math.cos(lngRad) / 0.001));
+    if (Math.abs(sun.lat) < 0.1) {
+      // Near equinox — smoothly interpolate to avoid discontinuity
+      // Use linear blend: at decl=0 the terminator is a vertical great circle
+      const tanDecl = Math.tan(deg2rad(Math.max(Math.abs(sun.lat), 0.01))) * Math.sign(sun.lat || 1);
+      lat = rad2deg(Math.atan(-Math.cos(lngRad) / tanDecl));
     } else {
       lat = rad2deg(Math.atan(-Math.cos(lngRad) / Math.tan(sunLatRad)));
     }
@@ -329,8 +331,7 @@ export class FlatMap {
   private rebuildLayers(): void {
     if (!this.deckOverlay || !this.ScatterplotLayerCtor) return;
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const layers: any[] = [];
+    const layers: InstanceType<typeof this.ScatterplotLayerCtor | typeof this.GeoJsonLayerCtor>[] = [];
 
     // --- Terminator overlay ---
     if (this.terminatorEnabled && this.GeoJsonLayerCtor) {

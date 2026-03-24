@@ -147,14 +147,33 @@ async def auth_middleware(request: Request, call_next):
     if path.startswith("/static/login"):
         return await call_next(request)
     
-    # Allow data endpoints without auth (read-only JSON feeds consumed by Vite frontend)
+    # Data endpoints: allow from authenticated sessions OR local Vite dev server
     if path.startswith("/data/") or path.startswith("/api/data/"):
-        return await call_next(request)
+        # Always allow if user has a valid JWT cookie
+        token = request.cookies.get(COOKIE_NAME)
+        if token and verify_token(token):
+            return await call_next(request)
+        # Allow from Vite dev server (localhost only)
+        origin = request.headers.get("origin", "")
+        referer = request.headers.get("referer", "")
+        if origin == "http://localhost:5173" or referer.startswith("http://localhost:5173"):
+            return await call_next(request)
+        # Allow if request comes from the same host (server-side rendering / direct browser with cookie)
+        if request.client and request.client.host in ("127.0.0.1", "::1", "localhost"):
+            return await call_next(request)
+        # Otherwise require auth
+        return JSONResponse({"error": "Authentication required"}, status_code=401)
     
-    # Dev mode bypass: skip all auth when ATLAS_DEV_MODE=1
+    # Dev mode bypass: only in non-production environments
     if os.environ.get("ATLAS_DEV_MODE") == "1":
-        request.state.user = "dev"
-        return await call_next(request)
+        if os.environ.get("ATLAS_ENV") == "production":
+            import logging
+            logging.warning("⚠️ ATLAS_DEV_MODE=1 is IGNORED in production. Set ATLAS_ENV != 'production' to use dev mode.")
+        else:
+            import logging
+            logging.warning("⚠️ ATLAS_DEV_MODE active — all auth bypassed. Do NOT use in production.")
+            request.state.user = "dev"
+            return await call_next(request)
     
     # Check JWT cookie
     token = request.cookies.get(COOKIE_NAME)

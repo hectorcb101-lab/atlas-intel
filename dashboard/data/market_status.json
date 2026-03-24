@@ -2,26 +2,26 @@
   "status": "online",
   "markets": {
     "VIX": {
-      "value": 26.35,
-      "change_pct": 0.76
+      "value": 25.95,
+      "change_pct": -0.76
     },
     "OIL": {
-      "value": 90.24,
-      "change_pct": 2.39
+      "value": 91.39,
+      "change_pct": 3.7
     },
     "GOLD": {
-      "value": 4413.4,
-      "change_pct": 0.21
+      "value": 4404.8,
+      "change_pct": 0.02
     },
     "DEFENSE": {
-      "value": 223.35,
-      "change_pct": 0.35
+      "value": 222.65,
+      "change_pct": -0.32
     },
     "SP500": {
-      "value": 6581.0,
-      "change_pct": 1.15
+      "value": NaN,
+      "change_pct": NaN
     }
   },
   "correlations": [],
-  "last_update": "2026-03-24T11:19:26.100853+00:00"
+  "last_update": "2026-03-24T15:31:54.390680+00:00"
 }
